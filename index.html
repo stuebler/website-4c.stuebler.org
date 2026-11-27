@@ -1,24 +1,104 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Klasse 4c - BRG Petersgasse</title>
+
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="https://assets.stuebler.org/wall.css">
-    <title>Webseite in Planung - Lena Strahwald & Moritz Stübler</title>
-</head>
+    <link rel="stylesheet" href="https://assets.stuebler.org/style.css">
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
 
-<body>
-    <main class="container">
-        <div class="icon">🏗️</div>
-        <h1>Webseite in Planung</h1>
-        <p>
-            Die Webseite wird aktuell noch geplant
-        </p>
-        <div class="notice">
-            Bitte schauen Sie später wieder vorbei
-        </div>
-    </main>
+<body class="page-4c">
+<header class="navbar">
+  <div class="nav-left">
+    <a class="nav-logo">
+      <img src="/logo.png">
+    </a>
 
+    <a href="#aktuell" class="nav-item">
+      <span>📢 Aktuelles</span>
+    </a>
+
+    <a href="#kz" class="nav-item">
+      <span>📰 Klassenzeitung</span>
+    </a>
+  </div>
+  
+  <div class="nav-right">
+    <a href="#kontakt" class="nav-item">
+      <i class="fa-solid fa-comment"></i>
+      <span>Kontakt</span>
+    </a>
+    
+    <a href="#" class="nav-item" onclick="navigator.share({url: 'https://4c.stuebler.org'}); return false;">
+      <i class="fa-solid fa-share-nodes"></i>
+      <span>Teilen</span>
+    </a>
+  </div>  
+</header>
+
+<header class="page-header"  id="top">
+    <h1>Klasse 4c</h1>
+    <p>BRG Petersgasse</p>
+</header>
+
+<main class="big-content">
+<section class="big-card" id="aktuell">
+    <h2>Aktuelles</h2>
+    <p><strong>Hausübung</strong></p>
+    <p><i>Mathe:</i> 25.HÜ: 2.149, BSP 13 verbessern <i>bis Mittwoch</i></p>
+    <p><i>Englisch:</i> Keine HÜ</p>
+    <p><i>Deutsch:</i> Keine HÜ</p>
+    <p>&nbsp;</p>
+
+    <p><strong>Termine</strong></p>
+    <p><i>Keine aktuellen Termine</i></p>
+</section>
+
+<section class="big-card" id="kz">
+    <div class="big-icon">📰</div>
+    <h2>Klassenzeitung</h2>
+    <p>Die Klassenzeitung erscheint immer Montags mit Artikeln der letzten Woche.</p>
+    <p><a class="button" href="/kz">Online ansehen</a></p>
+
+    <p>Alte Exemplare können im <a href="/kz/archiv">Archiv</a> angesehen werden</p>
+</section>
+
+<section class="big-card" id="kontakt">
+    <div class="navbar">
+        <a href="mailto:admin@stuebler.org?subject=Create%20Support%20Ticket%20with%20ID%204c&body=Gib%20deine%20Nachricht%20ein%3A%0A%E2%80%8B">
+          <i class="fa-solid fa-envelope"></i>
+          <span>E-Mail</span>
+        </a>
+        <a class="desktop-new-tab" href="https://api.whatsapp.com/send?phone=4367763704895&text=Create%20Support%20Ticket%20with%20ID%204c%0AGib%20deine%20Nachricht%20ein%3A%0A%E2%80%8B">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>WhatsApp</span>
+        </a>   
+        <a href="tel:+4367763704895">
+          <i class="fa-solid fa-phone"></i>
+          <span>Anruf</span>
+        </a>
+    </div>
+</section>
+</main>
+<script>
+  // Prüft, ob der Bildschirm breiter als Telefon ist
+  if (window.innerWidth >= 744) {
+    document.querySelectorAll('a.desktop-new-tab').forEach(link => {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    });
+  }
+</script>
+
+<div id="global-footer"></div>
+<script src="https://assets.stuebler.org/footer.js"></script>
 </body>
 </html>
